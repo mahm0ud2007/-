@@ -1,0 +1,131 @@
+body {
+    background-color: #f5f5f5;
+    color: #556B2F;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding-top: 50px;
+}
+
+.hidden {
+    display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    background-color: #228B22;
+    padding: 8px;
+    width: auto;
+    min-width: 150px;
+    max-width: 80%;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: yellow;
+}
+
+#content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dua-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.arrow-btn {
+    background-color: #228B22;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.arrow-btn:hover {
+    background-color: #1c6b1c;
+}
+
+.tasbeeh-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    margin: auto;
+}
+
+.button {
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0f0;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 15px #0f0;
+    transition: 0.3s;
+}
+
+.button.reset {
+    background-color: red;
+    box-shadow: 0 0 10px red;
+}
+
+.button:hover {
+    background-color: #0d0;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #556B2F;
+    color: white;
+    text-align: center;
+}
+
+footer a {
+    color: white; /* يجعل لون الرابط نفس لون النص */
+    text-decoration: none; /* يزيل التسطير */
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: yellow; /* تغيير اللون عند تمرير الماوس */
+}
