@@ -1,4 +1,4 @@
-// التنقل بين الأقسام
+
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -8,7 +8,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
-// عرض الأدعية بناءً على الفئة المختارة
+
 const duas = {
     'for-deceased': ["اللهم اغفر له وارحمه", "اللهم اجعل قبره روضة من رياض الجنة"],
     [
@@ -59,7 +59,7 @@ document.querySelectorAll('.dua-category').forEach(category => {
     });
 });
 
-// برمجة المسبحة
+
 let count = 0;
 document.getElementById("increase-btn").addEventListener("click", () => {
     count++;
