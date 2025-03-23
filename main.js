@@ -1,14 +1,8 @@
 
-document.querySelectorAll('.navbar a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelectorAll('.content').forEach(section => section.classList.add('hidden'));
-        const sectionId = link.id.replace('-btn', '-section');
-        document.getElementById(sectionId).classList.remove('hidden');
-    });
-});
-
-
+document.querySelectorAll(".dua-category").forEach((category) => {
+category.addEventListener("click", () => {
+const duaText = document.getElementById("dua-text");
+const categoryType = category.getAttribute("data-category");
 const duas = {
     'for-deceased': ["اللهم اغفر له وارحمه", "اللهم اجعل قبره روضة من رياض الجنة"],
     [
@@ -49,8 +43,11 @@ const duas = {
     'for-money': ["اللهم ارزقني من حيث لا أحتسب", "اللهم بارك لي في رزقي"],
     'for-rain': ["اللهم اسقنا غيثًا مغيثًا", "اللهم أنزل علينا من بركاتك"],
     'istikharah': ["اللهم إن كنت تعلم أن هذا الأمر خير لي...", "استخارة"]
-};
 
+duaText.textContent = duas[categoryType] || "اختر دعاء من القائمة";
+});
+});
+duatext.textcontent=
 document.querySelectorAll('.dua-category').forEach(category => {
     category.addEventListener('click', () => {
         const selectedCategory = category.getAttribute('data-category');
