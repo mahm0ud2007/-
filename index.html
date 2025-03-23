@@ -3,59 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thawab</title>
     <link rel="stylesheet" href="style.css">
+    <title>مشروع الأدعية والمسبحة</title>
 </head>
 
 <body>
 
- 
+    <!-- شريط التنقل -->
     <nav class="navbar">
-        <a href="#" id="home-btn">الرئيسية</a>
+        <a href="#" class="nav-link">الرئيسية</a>
         <div class="dropdown">
-            <a href="#" id="duas-btn">الأدعية</a>
+            <a href="#" class="nav-link">الأدعية</a>
             <div class="dropdown-content">
-                <a href="#" class="dua-category" data-category="for-deceased">دعاء للمتوفى</a>
-                <a href="#" class="dua-category" data-category="for-study">دعاء للمذاكرة</a>
-                <a href="#" class="dua-category" data-category="for-money">دعاء للرزق</a>
-                <a href="#" class="dua-category" data-category="for-rain">دعاء للمطر</a>
+                <a href="#" class="dua-category" data-category="for-deceased">دعاء المتوفى</a>
+                <a href="#" class="dua-category" data-category="for-study">دعاء المذاكرة</a>
+                <a href="#" class="dua-category" data-category="for-money">دعاء الرزق</a>
+                <a href="#" class="dua-category" data-category="for-rain">دعاء المطر</a>
                 <a href="#" class="dua-category" data-category="istikharah">دعاء الاستخارة</a>
             </div>
         </div>
-        <a href="#" id="tasbeeh-btn">السبحة</a>
-        <a href="#" id="qibla-btn">بوصلة القبلة</a>
+        <a href="#" class="nav-link">المسبحة</a>
+        <a href="#" class="nav-link">بوصلة القبلة</a>
     </nav>
 
-   
-    <section id="duas-section" class="hidden content">
-        <h2> نوعية الأدعيه </h2>
-        <div class="dua-container">
-            <p id="dua-text"> اختر دعاء من القائمة</p>
-        </div>
-    </section>
+    <!-- عرض الأدعية -->
+    <div class="content">
+        <h2 id="dua-text">اختر نوع الدعاء</h2>
+    </div>
 
-    <section id="tasbeeh-section" class="hidden content">
-        <h2>السبحة الإلكترونية</h2>
-        <div class="tasbeeh-container">
-            <div class="counter" id="counter">0</div>
-            <button class="button" id="increase-btn">تسبيح</button>
-            <button class="button reset" id="reset-btn">إعادة التصفير</button>
+    <!-- المسبحة الإلكترونية -->
+    <div class="tasbeeh-container">
+        <h3>سبحان الله والحمد لله</h3>
+        <div class="counter-display">
+            <span id="counter">0</span>
         </div>
-    </section>
-
-    
-    <section id="qibla-section" class="hidden content">
-        <h2>بوصلة القبلة</h2>
-        <div class="compass-container">
-            <img src="compass.png" alt="بوصلة" id="compass">
-        </div>
-    </section>
-
-  
-    <footer>
-        &copy; 2025 جميع الحقوق محفوظة - <span>تم التطوير بواسطة <strong>Thawab Team</strong></span>
-    </footer>
+        <button id="count-btn"></button>
+        <button id="reset-btn">إعادة التصفير</button>
+    </div>
 
     <script src="main.js"></script>
+
 </body>
 </html>
