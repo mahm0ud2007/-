@@ -3,26 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أدعية للمتوفى ومسبحة إلكترونية</title>
+    <title>Thawa</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- شريط التنقل -->
     <nav class="navbar">
         <a href="#" id="home-btn">الرئيسية</a>
-        <a href="#" id="duas-btn">الأدعية</a>
+        <div class="dropdown">
+            <a href="#" id="duas-btn">الأدعية</a>
+            <div class="dropdown-content">
+                <a href="#" class="dua-category" data-category="for-deceased">دعاء للمتوفى</a>
+                <a href="#" class="dua-category" data-category="for-study">دعاء للمذاكرة</a>
+                <a href="#" class="dua-category" data-category="for-money">دعاء للرزق</a>
+                <a href="#" class="dua-category" data-category="for-rain">دعاء للمطر</a>
+                <a href="#" class="dua-category" data-category="istikharah">دعاء الاستخارة</a>
+            </div>
+        </div>
         <a href="#" id="tasbeeh-btn">السبحة</a>
+        <a href="#" id="qibla-btn">بوصلة القبلة</a>
     </nav>
 
+    <!-- قسم الأدعية -->
     <section id="duas-section" class="hidden content">
-        <h2>أدعية للمتوفى</h2>
+        <h2>أدعية مختارة</h2>
         <div class="dua-container">
-            <p id="dua-text"></p>
-            <button id="prev-dua" class="arrow-btn">&larr;</button>
-            <button id="next-dua" class="arrow-btn">&rarr;</button>
+            <p id="dua-text">اختر دعاء من القائمة</p>
         </div>
     </section>
 
+    <!-- قسم المسبحة -->
     <section id="tasbeeh-section" class="hidden content">
         <h2>السبحة الإلكترونية</h2>
         <div class="tasbeeh-container">
@@ -32,10 +43,21 @@
         </div>
     </section>
 
+    <!-- قسم بوصلة القبلة -->
+    <section id="qibla-section" class="hidden content">
+        <h2>بوصلة القبلة</h2>
+        <div class="compass-container">
+            <img src="compass.png" alt="بوصلة" id="compass">
+        </div>
+    </section>
+
+    <!-- الفوتر -->
     <footer>
-        &copy; 2025 جميع الحقوق محفوظة - Developed by  
+        &copy; 2025 جميع الحقوق محفوظة - Developed by
     </footer>
 
     <script src="main.js"></script>
 </body>
 </html>
+
+    
