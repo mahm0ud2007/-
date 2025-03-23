@@ -1,4 +1,4 @@
-// التنقل بين الأقسام
+
 document.querySelectorAll('.navbar a').forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -8,7 +8,7 @@ document.querySelectorAll('.navbar a').forEach(link => {
     });
 });
 
-// عرض الأدعية بناءً على الفئة المختارة
+
 const duas = {
     "المتوفى": "اللهم اغفر له وارحمه وعافه واعف عنه.",
    
@@ -21,7 +21,7 @@ function showDua(type) {
     document.getElementById('dua-text').innerText = duas[type];
 }
 
-// برمجة المسبحة
+
 let count = 0;
 document.getElementById("increase-btn").addEventListener("click", () => {
     count++;
