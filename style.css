@@ -49,7 +49,7 @@ display: inline-block;
     position: absolute;
     background-color: #4a2c2a;
     min-width: 160px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     z-index: 15;
     border-radius: 5px;
     text-align: right;
