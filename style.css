@@ -1,8 +1,7 @@
-/* تنسيق خلفية الصفحة */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
-    color: #fff;
+    background: linear-gradient(to right, #e0c3a3, #c4a484);
+    color: #4a2c2a;
     text-align: center;
     padding: 0;
     margin: 0;
@@ -13,9 +12,9 @@ body {
     align-items: center;
 }
 
-/* شريط التنقل العلوي */
+
 .navbar {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #4a2c2a;
     padding: 10px 0;
     width: 100%;
     position: fixed;
@@ -25,10 +24,12 @@ body {
     justify-content: center;
     gap: 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
 }
 
+
 .navbar a {
-    color: #fff;
+    color: #f8ede3;
     text-decoration: none;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -36,45 +37,114 @@ body {
 }
 
 .navbar a:hover {
-    background-color: #00f2fe;
+    background-color: #c4a484;
     border-radius: 5px;
+    color: #4a2c2a;
 }
 
-/* تنسيق العداد */
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #4a2c2a;
+    min-width: 160px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.dropdown-content a {
+    color: #f8ede3;
+    padding: 10px 15px;
+    display: block;
+    transition: 0.3s;
+    font-size: 1em;
+}
+
+.dropdown-content a:hover {
+    background-color: #c4a484;
+    color: #4a2c2a;
+}
+
+
 .counter {
     font-size: 5em;
     margin: 20px;
     font-weight: bold;
+    color: #4a2c2a;
 }
 
-/* أزرار التسبيح */
+
 button {
     font-size: 1.2em;
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    background-color: #00f2fe;
-    color: #000;
+    background-color: #c4a484;
+    color: #4a2c2a;
     border: none;
     border-radius: 5px;
     transition: 0.3s;
-}
-
-button:hover {
-    background-color: #fff;
-    color: #00f2fe;
-}
-
-/* تنسيق بوصلة القبلة */
-#qibla-direction {
-    margin-top: 20px;
-    font-size: 1.5em;
     font-weight: bold;
 }
 
-/* تنسيق الفوتر */
+button:hover {
+    background-color: #4a2c2a;
+    color: #f8ede3;
+}
+
+
+.compass-container img {
+    width: 150px;
+    height: auto;
+    border: 5px solid #4a2c2a;
+    border-radius: 50%;
+    animation: rotateCompass 4s linear infinite;
+}
+
+
+@keyframes rotateCompass {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
 footer {
     margin-top: 20px;
     font-size: 0.9em;
     opacity: 0.8;
+    color: #4a2c2a;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.content {
+    margin-top: 80px;
+    padding: 20px;
+    width: 80%;
+    background: rgba(255, 245, 230, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.5s ease-in-out;
+    color: #4a2c2a;
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
