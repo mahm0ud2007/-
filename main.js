@@ -47,22 +47,3 @@ const duas = {
 duaText.textContent = duas[categoryType] || "اختر دعاء من القائمة";
 });
 });
-duatext.textcontent=
-document.querySelectorAll('.dua-category').forEach(category => {
-    category.addEventListener('click', () => {
-        const selectedCategory = category.getAttribute('data-category');
-        const duaText = document.getElementById('dua-text');
-        duaText.textContent = duas[selectedCategory][0];
-    });
-});
-
-
-let count = 0;
-document.getElementById("increase-btn").addEventListener("click", () => {
-    count++;
-    document.getElementById("counter").textContent = count;
-});
-document.getElementById("reset-btn").addEventListener("click", () => {
-    count = 0;
-    document.getElementById("counter").textContent = count;
-});
