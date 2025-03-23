@@ -41,14 +41,15 @@ body {
     border-radius: 5px;
     color: #4a2c2a;
 }
-
-
+.dropdown{
+position:relative;
+display: inline-block;
 .dropdown-content {
     display: none;
     position: absolute;
     background-color: #4a2c2a;
     min-width: 160px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     z-index: 15;
     border-radius: 5px;
     text-align: right;
@@ -56,7 +57,7 @@ body {
 
 .dropdown-content a {
     color: #f8ede3;
-    padding: 10px 15px;
+    padding: 10px ;
     display: block;
     transition: 0.3s;
     font-size: 1em;
@@ -66,8 +67,17 @@ body {
     background-color: #c4a484;
     color: #4a2c2a;
 }
-
-
+ dropdown : hover .dropdown-content {
+display: block;
+    .dua-container {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+    width: 80%;
+    max-width: 500px
+{
 .counter {
     font-size: 5em;
     margin: 20px;
