@@ -1,13 +1,17 @@
-// التنقل بين الاقسام
-document.querySelectorAll('.navbar a').forEach(link => 
-    {
-    link.addEventListener('click', (e) => 
-    {
+// التنقل بين الأقسام
+document.querySelectorAll('.navbar a').forEach(link => {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
+        
+        // إخفاء كل الأقسام
         document.querySelectorAll('.content').forEach(section => section.classList.add('hidden'));
+
+        // معرفة القسم اللي المستخدم اختاره
         const sectionId = link.id.replace('-btn', '-section');
-document.getElementById(sectionId).classList.remove('hidden');
-});});
+        document.getElementById(sectionId).classList.remove('hidden');
+    });
+});
+
 // بيانات الأدعية
 const duas = {
     "for-deceased": ["اللهم اغفر له وارحمه", "اللهم اجعل قبره روضة من رياض الجنة"],
@@ -17,16 +21,17 @@ const duas = {
     "istikharah": ["اللهم إن كنت تعلم أن هذا خير لي", "اللهم اختر لي ولا تخيرني"]
 };
 
-// تغيير الدعاء عند اختيار الفئة
+// عرض الدعاء عند اختيار الفئة
 document.querySelectorAll(".dua-category").forEach(category => {
     category.addEventListener("click", () => {
         const selectedCategory = category.getAttribute("data-category");
         const duaText = document.getElementById("dua-text");
+        document.getElementById("dua-section").classList.remove("hidden");
         duaText.textContent = duas[selectedCategory][Math.floor(Math.random() * duas[selectedCategory].length)];
     });
 });
 
-// المسبحة
+// السبحة
 let count = 0;
 
 document.getElementById("count-btn").addEventListener("click", () => {
@@ -38,4 +43,3 @@ document.getElementById("reset-btn").addEventListener("click", () => {
     count = 0;
     document.getElementById("counter").textContent = count;
 });
-
