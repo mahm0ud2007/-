@@ -9,38 +9,41 @@
 
 <body>
 
-    
-    <nav class="navbar">
-        <a href="#" class="nav-link">الرئيسية</a>
+    <!-- شريط التنقل -->
+    <div class="navbar">
+        <a href="#" id="home-btn">الرئيسية</a>
         <div class="dropdown">
-            <a href="#" class="nav-link">الأدعية</a>
+            <a href="#">الأدعية ▼</a>
             <div class="dropdown-content">
-                <a href="#" class="dua-category" data-category="for-deceased">دعاء المتوفى</a>
-                <a href="#" class="dua-category" data-category="for-study">دعاء المذاكرة</a>
-                <a href="#" class="dua-category" data-category="for-money">دعاء الرزق</a>
+                <a href="#" class="dua-category" data-category="for-deceased">دعاء للمتوفى</a>
+                <a href="#" class="dua-category" data-category="for-study">دعاء للمذاكرة</a>
+                <a href="#" class="dua-category" data-category="for-money">دعاء للرزق</a>
                 <a href="#" class="dua-category" data-category="for-rain">دعاء المطر</a>
                 <a href="#" class="dua-category" data-category="istikharah">دعاء الاستخارة</a>
             </div>
         </div>
-        <a href="#" class="nav-link">السبحة</a>
-        <a href="#" class="nav-link">بوصلة القبلة</a>
-    </nav>
-
-    <div class="content">
-        <h2 id="dua-text">اختر نوع الدعاء</h2>
+   
     </div>
 
- 
-    <div class="tasbeeh-container">
-        
-        <div class="counter-display">
-            <span id="counter">0</span>
+    <!--  الأدعية -->
+    <div id="dua-section" class="hidden content">
+        <h2>الدعاء:</h2>
+        <p id="dua-text">اختر فئة الدعاء من القائمة</p>
+    </div>
+
+    <!--  السبحة -->
+    <div id="counter-section" class="content">
+        <h2>المسبحة الإلكترونية</h2>
+        <div class="tasbeeh-container">
+            <h3 id="counter">0</h3>
+            <button id="count-btn">Count</button>
+            <button id="reset-btn">Reset</button>
         </div>
-        <button id="count-btn"></button>
-        <button id="reset-btn">إعادة التصفير</button>
     </div>
 
     <script src="main.js"></script>
 
 </body>
 </html>
+
+   
