@@ -1,119 +1,117 @@
-/* استيراد خط عربي */
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
-
-/* إعدادات عامة */
 body {
-  font-family: 'Cairo', sans-serif;
-  background: url('https://www.transparenttextures.com/patterns/beige-paper.png');
-  background-color: #fefcf8;
+  font-family: 'Arial', sans-serif;
+  background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
+  background-color: #f3f1e7;
+  background-repeat: repeat;
   margin: 0;
   padding: 0;
   direction: rtl;
-  color: #3e2c17;
 }
 
-/* شريط القوائم */
-nav {
-  background-color: #a67c52;
-  color: white;
+.navbar {
+  background-color: #a9825d;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
   justify-content: space-around;
-  padding: 10px 0;
-  font-weight: bold;
 }
 
-nav a {
+.navbar li {
   color: white;
-  text-decoration: none;
-  padding: 8px 15px;
-  transition: background 0.3s;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
 }
 
-nav a:hover {
-  background-color: #8b5e3c;
-  border-radius: 5px;
+.navbar li:hover {
+  text-decoration: underline;
 }
 
-/* الأقسام */
-section {
+.section {
+  padding: 20px;
+}
+
+.hidden {
   display: none;
-  padding: 30px;
-  margin: 20px auto;
-  background-color: #fff8f0;
-  width: 90%;
-  max-width: 800px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
-/* عنوان القسم */
 h2 {
-  color: #5a3e1b;
   text-align: center;
-  margin-bottom: 20px;
+  color: #5b422b;
 }
 
-/* الأدعية */
-#duaa-container {
-  text-align: center;
-  font-size: 1.2em;
+select {
+  display: block;
+  margin: 10px auto;
+  padding: 10px;
+  font-size: 16px;
 }
 
-select, button {
-  padding: 10px 15px;
-  margin: 10px;
-  font-size: 1em;
+.duaa-box {
+  background-color: #fff8ee;
+  border: 2px solid #d6c3a6;
+  padding: 20px;
+  margin: 15px auto;
+  max-width: 600px;
+  text-align: center;
+  font-size: 18px;
   border-radius: 8px;
-  border: 1px solid #ccc;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.duaa-buttons {
+  text-align: center;
 }
 
 button {
-  background-color: #a67c52;
+  background-color: #a9825d;
   color: white;
+  padding: 10px 20px;
+  margin: 5px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #8b5e3c;
+  background-color: #8c6a49;
 }
 
-/* المسبحة */
-#tasbeehDisplay {
-  font-size: 2em;
-  margin: 20px 0;
-  color: #704214;
-}
-
-#tasbeeh-section button {
-  margin-top: 10px;
-}
-
-/* التقويم */
-#date-container {
-  text-align: center;
-  font-size: 1.3em;
-  background-color: #f2e4d8;
-  padding: 15px;
-  border-radius: 10px;
+.sebha-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  font-size: 22px;
   margin-top: 20px;
 }
 
-/* الزكاة */
-#zakah-section input {
+.tasbeeh-texts {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #5b422b;
+}
+
+input[type="number"] {
   padding: 10px;
   width: 200px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-#zakahResult {
-  margin-top: 15px;
-  font-weight: bold;
-  color: #4b3412;
-  font-size: 1.1em;
-}
-
-/* إظهار القسم النشط */
-.active-section {
+  margin: 10px auto;
   display: block;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.result {
+  text-align: center;
+  font-size: 18px;
+  color: #3e3e3e;
+  margin-top: 10px;
 }
