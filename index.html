@@ -12,7 +12,7 @@
   <nav class="navbar">
     <ul>
       <li onclick="showSection('duaaSection')">الأدعية</li>
-      <li onclick="showSection('sebhaSection')">السبحة</li>
+      <li onclick="showSection('sebhaSection')">المسبحة</li>
       <li onclick="showSection('calendarSection')">التقويم الهجري</li>
       <li onclick="showSection('zakahSection')">حساب الزكاة</li>
     </ul>
@@ -36,7 +36,7 @@
     </div>
   </section>
 
-  <!-- قسم السبحة -->
+  <!-- قسم المسبحة -->
   <section id="sebhaSection" class="section hidden">
     <h2>المسبحة</h2>
     <div class="sebha-counter">
@@ -54,7 +54,24 @@
   <!-- قسم التقويم الهجري -->
   <section id="calendarSection" class="section hidden">
     <h2>التقويم الهجري</h2>
-    <iframe src="https://www.islamicfinder.org/prayer-widget/" width="100%" height="500" frameborder="0"></iframe>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calendar">
+    <h2>التقويم الهجري والميلادي لسنة <span id="hijri-year"></span> هـ</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>اليوم</th>
+          <th>الهجري</th>
+          <th>الميلادي</th>
+        </tr>
+      </thead>
+      <tbody id="calendar-body">
+        <!-- سيتم إدخال الصفوف تلقائيًا -->
+      </tbody>
+    </table>
+  </div>
   </section>
 
   <!-- قسم الزكاة -->
