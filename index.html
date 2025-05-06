@@ -1,49 +1,70 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Thawab</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ثواب</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- شريط التنقل -->
-    <div class="navbar">
-        <a href="#" id="home-btn">الرئيسية</a>
-        <div class="dropdown">
-            <a href="#">الأدعية ▼</a>
-            <div class="dropdown-content">
-                <a href="#" class="dua-category" data-category="for-deceased">دعاء للمتوفى</a>
-                <a href="#" class="dua-category" data-category="for-study">دعاء للمذاكرة</a>
-                <a href="#" class="dua-category" data-category="for-money">دعاء للرزق</a>
-                <a href="#" class="dua-category" data-category="for-rain">دعاء المطر</a>
-                <a href="#" class="dua-category" data-category="istikharah">دعاء الاستخارة</a>
-            </div>
-        </div>
-   
+  <!-- شريط القوائم -->
+  <nav class="navbar">
+    <ul>
+      <li onclick="showSection('duaaSection')">الأدعية</li>
+      <li onclick="showSection('sebhaSection')">المسبحة</li>
+      <li onclick="showSection('calendarSection')">التقويم الهجري</li>
+      <li onclick="showSection('zakahSection')">حساب الزكاة</li>
+    </ul>
+  </nav>
+
+  <!-- قسم الأدعية -->
+  <section id="duaaSection" class="section">
+    <h2>فئات الأدعية</h2>
+    <select id="category" onchange="loadDuaa()">
+      <option value="rizq">دعاء للرزق</option>
+      <option value="study">دعاء للمذاكرة</option>
+      <option value="rain">دعاء للمطر</option>
+      <option value="deceased">دعاء للمتوفى</option>
+      <option value="evening">دعاء الصباح والمساء</option>
+      <option value="istikhara">دعاء الاستخارة</option>
+    </select>
+    <div id="duaaText" class="duaa-box"></div>
+    <div class="duaa-buttons">
+      <button onclick="prevDuaa()">السابق</button>
+      <button onclick="nextDuaa()">التالي</button>
     </div>
+  </section>
 
-    <!--  الأدعية -->
-    <div id="dua-section" class="hidden content">
-        <h2>الدعاء:</h2>
-        <p id="dua-text">اختر فئة الدعاء من القائمة</p>
+  <!-- قسم المسبحة -->
+  <section id="sebhaSection" class="section hidden">
+    <h2>المسبحة</h2>
+    <div class="sebha-counter">
+      <button onclick="incrementCount()">تسبيح</button>
+      <span id="count">0</span>
+      <button onclick="resetCount()">إعادة</button>
     </div>
-
-    <!--  السبحة -->
-    <div id="counter-section" class="content">
-        <h2>المسبحة الإلكترونية</h2>
-        <div class="tasbeeh-container">
-            <h3 id="counter">0</h3>
-            <button id="count-btn">Count</button>
-            <button id="reset-btn">Reset</button>
-        </div>
+    <div class="tasbeeh-texts">
+      <p>سبحان الله</p>
+      <p>الحمد لله</p>
+      <p>الله أكبر</p>
     </div>
+  </section>
 
-    <script src="main.js"></script>
+  <!-- قسم التقويم الهجري -->
+  <section id="calendarSection" class="section hidden">
+    <h2>التقويم الهجري</h2>
+    <iframe src="https://www.islamicfinder.org/prayer-widget/" width="100%" height="500" frameborder="0"></iframe>
+  </section>
 
+  <!-- قسم الزكاة -->
+  <section id="zakahSection" class="section hidden">
+    <h2>حساب الزكاة</h2>
+    <input type="number" id="money" placeholder="أدخل المبلغ" />
+    <button onclick="calculateZakah()">احسب الزكاة</button>
+    <div id="zakahResult" class="result"></div>
+  </section>
+
+  <script src="main.js"></script>
 </body>
 </html>
-
-   
