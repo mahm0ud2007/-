@@ -1,117 +1,115 @@
+/*  الخط العربي */
+@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
+
+/* إعدادات عامة */
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/symphony.png');
-    background-color: #f3f1e7;
-    background-repeat: repeat;
-    margin: 0;
-    padding: 0;
-    direction: rtl;
-  }
-  
-  .navbar {
-    background-color: #a9825d;
-    padding: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .navbar li {
-    color: white;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .navbar li:hover {
-    text-decoration: underline;
-  }
-  
-  .section {
-    padding: 20px;
-  }
-  
-  .hidden {
-    display: none;
-  }
-  
-  h2 {
-    text-align: center;
-    color: #5b422b;
-  }
-  
-  select {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .duaa-box {
-    background-color: #fff8ee;
-    border: 2px solid #d6c3a6;
-    padding: 20px;
-    margin: 15px auto;
-    max-width: 600px;
-    text-align: center;
-    font-size: 18px;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  }
-  
-  .duaa-buttons {
-    text-align: center;
-  }
-  
-  button {
-    background-color: #a9825d;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #8c6a49;
-  }
-  
-  .sebha-counter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-size: 22px;
-    margin-top: 20px;
-  }
-  
-  .tasbeeh-texts {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 20px;
-    color: #5b422b;
-  }
-  
-  input[type="number"] {
-    padding: 10px;
-    width: 200px;
-    margin: 10px auto;
-    display: block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .result {
-    text-align: center;
-    font-size: 18px;
-    color: #3e3e3e;
-    margin-top: 10px;
-  }
+  margin: 0;
+  font-family: 'Amiri', serif;
+  background-image: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  background-color: #f5f0e6;
+  background-repeat: repeat;
+  color: #4a3f35;
+}
+
+/* شريط القوائم */
+nav {
+  background-color: #7b5e44;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffe8b3;
+}
+
+/* العناوين */
+h2, h3 {
+  text-align: center;
+  color: #6b4c3b;
+}
+
+/* الأقسام */
+section {
+  display: none;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.92);
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* الأدعية */
+#duaaText {
+  font-size: 20px;
+  line-height: 1.8;
+  text-align: center;
+  margin: 20px 0;
+}
+
+#category {
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* أزرار السابق والتالي */
+button {
+  background-color: #a67c52;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #8b6f4e;
+}
+
+/* المسبحة */
+#counter {
+  font-size: 28px;
+  margin: 10px;
+  color: #5c3d2e;
+  text-align: center;
+}
+
+/* التقويم الهجري */
+#hijri-date {
+  font-size: 20px;
+  color: #6e4f3c;
+  text-align: center;
+  margin: 15px 0;
+}
+
+/* حساب الزكاة */
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#zakahResult {
+  font-size: 18px;
+  color: #4a3f35;
+  text-align: center;
+  margin-top: 10px;
+}
