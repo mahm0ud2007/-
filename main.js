@@ -83,6 +83,23 @@ const duaas = {
     count = 0;
     document.getElementById('count').textContent = count;
   }
+  // التاريخ الهجري باستخدام التاريخ الميلادي الحالي
+function getHijriDate() {
+  const today = new Date().toLocaleDateString('ar-SA-u-ca-islamic', {
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
+  document.getElementById("hijri-date").textContent = "التاريخ الهجري: " + today;
+}
+
+// تنفيذ الدالة بعد تحميل الصفحة
+window.onload = function() {
+  showSection('adhkar'); // عرض قسم افتراضي
+  getHijriDate(); // عرض التاريخ الهجري
+};
   
   // زكاة
   function calculateZakah() {
