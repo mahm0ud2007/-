@@ -91,24 +91,42 @@ function resetCount() {
 // حساب الزكاة
 function calculateZakah() {
   const money = parseFloat(document.getElementById("money").value);
+  const goldPrice = 3000; // سعر جرام الذهب بالجنيه (غيّره حسب السعر الحالي)
+  const nisab = goldPrice * 85;
+
   if (!isNaN(money) && money >= 0) {
-    const zakah = money * 0.025;
-    document.getElementById("zakahResult").textContent = قيمة الزكاة: ${zakah.toFixed(2)} جنيه;
+    if (money >= nisab) {
+      const zakah = money * 0.025;
+      document.getElementById("zakahResult").textContent =
+        `قيمة الزكاة: ${zakah.toFixed(2)} جنيه (لأن المبلغ بلغ النصاب وهو ${nisab.toFixed(2)} جنيه)`;
+    } else {
+      document.getElementById("zakahResult").textContent =
+        `لا زكاة على هذا المبلغ لأنه أقل من النصاب (${nisab.toFixed(2)} جنيه).`;
+    }
   } else {
     document.getElementById("zakahResult").textContent = "الرجاء إدخال مبلغ صالح.";
   }
 }
-
-// التقويم الهجري
-function loadHijriDate() {
+function loadDates() {
   const today = new Date();
+
+  // التاريخ الميلادي
+  const gregorianFormatter = new Intl.DateTimeFormat('ar-EG', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+  });
+  const gregorianDate = gregorianFormatter.format(today);
+  document.getElementById("gregorianDate").textContent = `التاريخ الميلادي: ${gregorianDate}`;
+
+  // التاريخ الهجري
   const hijriFormatter = new Intl.DateTimeFormat('ar-SA-u-ca-islamic', {
     day: 'numeric',
     month: 'long',
     year: 'numeric'
   });
   const hijriDate = hijriFormatter.format(today);
-  document.getElementById("hijriDate").textContent = التاريخ الهجري: ${hijriDate};
+  document.getElementById("hijriDate").textContent = `التاريخ الهجري: ${hijriDate}`;
 }
 
-window.onload = loadHijriDate;
+
