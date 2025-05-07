@@ -88,27 +88,21 @@ function resetCount() {
 
 // زكاة
 function calculateZakah() {
-  const goldPrice = parseFloat(document.getElementById("goldPrice").value);
   const money = parseFloat(document.getElementById("money").value);
-  const zakahResult = document.getElementById("zakahResult");
-
-  if (isNaN(goldPrice) || goldPrice <= 0) {
-    zakahResult.textContent = "الرجاء إدخال سعر جرام الذهب بشكل صحيح.";
-    return;
-  }
-
-  if (isNaN(money) || money < 0) {
-    zakahResult.textContent = "الرجاء إدخال مبلغ صالح.";
-    return;
-  }
-
+  const goldPrice = 3000; // سعر جرام الذهب بالجنيه (غيّره حسب السعر الحالي)
   const nisab = goldPrice * 85;
 
-  if (money < nisab) {
-    zakahResult.textContent = `❌ المبلغ لا يبلغ النصاب.\nالنصاب الحالي: ${nisab.toFixed(2)} جنيه.`;
+  if (!isNaN(money) && money >= 0) {
+    if (money >= nisab) {
+      const zakah = money * 0.025;
+      document.getElementById("zakahResult").textContent =
+        `قيمة الزكاة: ${zakah.toFixed(2)} جنيه (لأن المبلغ بلغ النصاب وهو ${nisab.toFixed(2)} جنيه)`;
+    } else {
+      document.getElementById("zakahResult").textContent =
+        `لا زكاة على هذا المبلغ لأنه أقل من النصاب (${nisab.toFixed(2)} جنيه).`;
+    }
   } else {
-    const zakah = money * 0.025;
-    zakahResult.textContent = `✅ المبلغ بلغ النصاب.\nقيمة الزكاة: ${zakah.toFixed(2)} جنيه.`;
+    document.getElementById("zakahResult").textContent = "الرجاء إدخال مبلغ صالح.";
   }
 }
 
